@@ -26,7 +26,10 @@ def fetch_tests():
     query = {
         "query": """
         {
-          getTests(jql: "project = XSP AND labels in (released4run, daily1)") {
+          getTests(
+  jql: "project = XSP AND labels in (released4run, daily1)",
+  limit: 10
+) {
             results {
               jira(fields: ["key"])
             }

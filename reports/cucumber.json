@@ -1,0 +1,66 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "features/login.feature:4",
+      "name": "XSP-69 Valid login test",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/login.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "steps/login_steps.py:3"
+          },
+          "name": "user is on login page",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/login.feature:6",
+          "match": {
+            "arguments": [],
+            "location": "steps/login_steps.py:7"
+          },
+          "name": "user enters valid username and password",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/login.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "steps/login_steps.py:11"
+          },
+          "name": "user should see dashboard",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "released4run",
+        "daily1"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "features/login.feature:1",
+  "name": "Login Feature",
+  "status": "passed",
+  "tags": []
+}
+]

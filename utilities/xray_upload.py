@@ -18,8 +18,8 @@ def get_token():
 def upload_results():
     token = get_token()
 
-    url = "https://eu.xray.cloud.getxray.app/api/v2/import/execution/cucumber"
-
+    #url = "https://eu.xray.cloud.getxray.app/api/v2/import/execution/cucumber"
+    url = "https://eu.xray.cloud.getxray.app/api/v2/import/execution/behave"
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json"

@@ -1,6 +1,6 @@
 from behave import given, when, then
 
-@given('user is on login page')
+@given('user opens login page')
 def step_impl(context):
     print("Login page opened")
 
@@ -8,6 +8,6 @@ def step_impl(context):
 def step_impl(context):
     print("User entered credentials")
 
-@then('user should see dashboard')
+@then('user should login successfully')
 def step_impl(context):
     print("Dashboard verified")

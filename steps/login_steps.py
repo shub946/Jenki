@@ -9,10 +9,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 @given('user opens login page')
 def step_impl(context):
-    driver = webdriver.Chrome();
-    driver.get("https://wccqa.on24.com/webcast/login");
+    context.driver = webdriver.Chrome();
+    context.driver.get("https://wccqa.on24.com/webcast/login");
     # for maximize window
-    driver.maximize_window();
+    context.driver.maximize_window();
     time.sleep(10)
     print("Login page opened")
 

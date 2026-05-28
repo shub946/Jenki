@@ -18,5 +18,8 @@ def step_impl(context):
     time.sleep(10)
     print("User entered credentials")
 @then('user should login successfully')
-def step_impl():
-    print("Dashboard verified")
+def step_impl(context):
+    time.sleep(5)
+    assert "webcasts" in context.driver.current_url.lower()
+    print("Login successful")
+    context.driver.quit()

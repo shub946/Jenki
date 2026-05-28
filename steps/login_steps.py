@@ -9,24 +9,18 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 @given('user opens login page')
 def step_impl(context):
-    options = webdriver.ChromeOptions()
-    options.add_argument("--start-maximized")
-
-    context.driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()),
-        options=options
-    )
-
-    context.driver.get("https://wccqa.on24.com/webcast/login")
+    driver = webdriver.Chrome();
+    driver.get("https://wccqa.on24.com/webcast/login");
+    # for maximize window
+    driver.maximize_window();
     time.sleep(10)
     print("Login page opened")
 
 @when('user enters valid username and password')
 def step_impl(context):
-    context.driver.find_element(By.ID, "username").send_keys("real_username")
-    context.driver.find_element(By.ID, "password").send_keys("real_password")
-    context.driver.find_element(By.ID, "loginBtn").click()
-
+    context.driver.find_element(By.ID, "username").send_keys("qauser001")
+    context.driver.find_element(By.ID, "password").send_keys("Password1")
+    context.driver.find_element(By.XPATH, "//button[@type='submit']").click()
     time.sleep(10)
     print("User entered credentials")
 
